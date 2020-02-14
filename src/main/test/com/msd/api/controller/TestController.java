@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin()
 @RestController
-@RequestMapping({ "/employees" })
+@RequestMapping({ "/persons" })
 public class TestController {
 
 	private List<Person> personList = createList();
