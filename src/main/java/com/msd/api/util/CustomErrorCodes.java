@@ -7,7 +7,8 @@ public enum CustomErrorCodes {
             HttpStatus.BAD_REQUEST), USER_EXISTS(1001, " User already exists",
             HttpStatus.BAD_REQUEST), INVALID_PASSWORD(1002, "Invalid Password",
             HttpStatus.BAD_REQUEST), INVALID_USERNAME(1003, "Invalid email / username",
-            HttpStatus.BAD_REQUEST);
+            HttpStatus.BAD_REQUEST), PERSON_NOT_FOUND(1004, "No employee record exist for given id",
+            HttpStatus.NOT_FOUND );
 
     private final int id;
     private final String msg;

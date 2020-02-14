@@ -9,10 +9,10 @@ import java.io.Serializable;
 public class PersonVo implements Serializable {
 
     private int id;
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
     private String age;
-    private String favourite_color;
+    private String favouriteColor;
     private String[] hobby;
 
     public PersonVo() {
@@ -26,20 +26,20 @@ public class PersonVo implements Serializable {
         this.id = id;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getAge() {
@@ -50,12 +50,12 @@ public class PersonVo implements Serializable {
         this.age = age;
     }
 
-    public String getFavourite_color() {
-        return favourite_color;
+    public String getFavouriteColor() {
+        return favouriteColor;
     }
 
-    public void setFavourite_color(String favourite_color) {
-        this.favourite_color = favourite_color;
+    public void setFavouriteColor(String favouriteColor) {
+        this.favouriteColor = favouriteColor;
     }
 
     public String[] getHobby() {

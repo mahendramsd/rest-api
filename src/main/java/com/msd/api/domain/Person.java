@@ -1,31 +1,42 @@
 package com.msd.api.domain;
 
+import org.springframework.http.ResponseEntity;
+
 import javax.persistence.Id;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
-public class Person implements Serializable {
+public class Person {
 
     @Id
-    @GeneratedValue
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String age;
-    private String favouriteColor;
-    private String hobby;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+        private int id;
+        private String firstName;
+        private String lastName;
+        private String age;
+        private String favouriteColor;
+        private String hobby;
 
     public Person() {
     }
 
-    public long getId() {
+    public Person(String firstName, String lastName, String age, String favouriteColor, String hobby) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.favouriteColor = favouriteColor;
+        this.hobby = hobby;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

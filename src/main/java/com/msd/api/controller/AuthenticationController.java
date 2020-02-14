@@ -32,21 +32,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-
 @CrossOrigin
 @Api(value = "Authentication Controller", description = "User Authentication and generate Token")
 public class AuthenticationController {
 
     @Autowired
-
     private AuthenticationManager authenticationManager;
 
     @Autowired
-
     private SecurityConfig securityConfig;
 
     @Autowired
-
     private UserService userService;
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
