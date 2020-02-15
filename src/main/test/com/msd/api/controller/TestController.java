@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin()
 @RestController
-@RequestMapping({ "/persons" })
+@RequestMapping({"/persons"})
 public class TestController {
 
 	private List<Person> personList = createList();
@@ -25,7 +25,7 @@ public class TestController {
 		return personList;
 	}
 
-	@DeleteMapping(path = { "/{id}" })
+	@DeleteMapping(path = {"/{id}"})
 	public Person delete(@PathVariable("id") long id) {
 		Person personDe = null;
 		for (Person person : personList) {

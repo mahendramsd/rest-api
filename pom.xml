@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.msd</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>rest-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rest-api</name>
     <description>Rest-API</description>
@@ -59,13 +59,6 @@
             <artifactId>android-json</artifactId>
             <version>0.0.20131108.vaadin1</version>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-jdbc</artifactId>-->
-            <!--<version>5.0.4.RELEASE</version>-->
-        <!--</dependency>-->
-
 
     </dependencies>
 

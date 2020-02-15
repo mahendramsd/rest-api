@@ -13,7 +13,7 @@ public class PersonVo implements Serializable {
     private String lastName;
     private String age;
     private String favouriteColor;
-    private String[] hobby;
+    private String hobby;
 
     public PersonVo() {
     }
@@ -58,11 +58,11 @@ public class PersonVo implements Serializable {
         this.favouriteColor = favouriteColor;
     }
 
-    public String[] getHobby() {
+    public String getHobby() {
         return hobby;
     }
 
-    public void setHobby(String[] hobby) {
+    public void setHobby(String hobby) {
         this.hobby = hobby;
     }
 }

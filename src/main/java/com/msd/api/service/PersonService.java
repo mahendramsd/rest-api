@@ -64,7 +64,7 @@ public class PersonService {
         person.setLastName(personVo.getLastName());
         person.setAge(personVo.getAge());
         person.setFavouriteColor(personVo.getFavouriteColor());
-        person.setHobby(Arrays.toString(personVo.getHobby()));
+        person.setHobby(personVo.getHobby());
         return personRepository.save(person);
     }
 

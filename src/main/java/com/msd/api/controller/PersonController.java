@@ -23,14 +23,14 @@ public class PersonController {
 
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Person Add endpoint", response = PersonVo.class)
-    public Person addPerson(@RequestBody PersonVo personVo) {
-        return personService.addPerson(personVo);
+    @ApiOperation(value = "Person Add endpoint", response = ResponseEntity.class)
+    public ResponseEntity<Person> addPerson(@RequestBody PersonVo personVo) {
+        return new ResponseEntity<>(personService.addPerson(personVo),HttpStatus.OK) ;
     }
 
     @GetMapping("/view")
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Person view endpoint", response = Person.class)
+    @ApiOperation(value = "Person view endpoint", response = ResponseEntity.class)
     public List<Person> viewPerson() {
         return personService.findAll();
     }
@@ -38,19 +38,16 @@ public class PersonController {
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Person delete endpoint", response = Person.class)
-    public ResponseEntity<Integer> deletePerson(@PathVariable Integer id) {
-        Boolean isDelete = personService.delete(id);
-        if (!isDelete) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(id, HttpStatus.OK);
+    public ResponseEntity deletePerson(@PathVariable Integer id) {
+        personService.delete(id);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping("/view/{id}")
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Person view edit endpoint", response = Person.class)
-    public Person viewEditPerson(@PathVariable Integer id) {
-        return personService.findPerson(id);
+    public ResponseEntity<Person> viewEditPerson(@PathVariable Integer id) {
+        return new ResponseEntity<Person>(personService.findPerson(id),HttpStatus.OK);
     }
 
 
